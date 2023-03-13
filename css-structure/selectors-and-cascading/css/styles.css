@@ -88,7 +88,7 @@ footer a {
 }
 
 /* 8. These styles should apply to all "notes" */
-.text-node {
+.text-note {
   font-size: 0.8em;
   color: #808080;
 }
