@@ -28,8 +28,10 @@ main {
 
 /**
  * Look at the selectors defined below.
- * Position each element, so that the placement matches the name of the selector.
- * Adjust the rule-sets for each selector to satisfy the name.
+ * Position each element, so that the placement matches
+ the name of the selector.
+ * Adjust the rule-sets for each selector to satisfy
+ the name.
  *
  * @example
  * .box--top-left -> This element should be be placed in the top, left corner.
@@ -37,28 +39,51 @@ main {
 
 .box--top-left {
   background-color: #aed6f1;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .box--top-center {
   background-color: #85c1e9;
+  position: absolute;
+  top: 0;
+  /* Is there a way to specify the width of the box
+  in calc without hard-coding it? */
+  left: calc(50% - 80px / 2);
 }
 
 .box--top-right {
   background-color: #5dade2;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .box--center {
   background-color: #3498db;
+  position: absolute;
+  top: calc(50% - 80px / 2);
+  left: calc(50% - 80px / 2);
 }
 
 .box--bottom-left {
   background-color: #2874a6;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .box--bottom-center {
   background-color: #21618c;
+  position: absolute;
+  left: calc(50% - 80px / 2);
+  bottom: 0;
 }
 
 .box--bottom-right {
   background-color: #1b4f72;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
