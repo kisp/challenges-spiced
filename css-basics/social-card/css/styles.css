@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  font-family: Arial, sans-serif;
+}
+
+article {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+img {
+  width: 100px;
+  border-radius: 8px;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+h2,
+p {
+  margin: 12px 0;
+}
+
+p.account {
+  color: gray;
+}
+
+button {
+  border: none;
+  background: none;
+  color: deepskyblue;
+  padding: 0;
+}
+
+button:hover {
+  filter: brightness(85%);
+}
