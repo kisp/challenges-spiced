@@ -251,3 +251,14 @@ width, etc. */
 /* --- */
 /* Replace this comment with your media query. */
 /* --- */
+
+@media screen and (min-width: 900px) {
+  .card-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card-section > * {
+    width: 45%;
+  }
+}
