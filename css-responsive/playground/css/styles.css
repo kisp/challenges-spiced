@@ -94,3 +94,40 @@ h1 {
 .box--five img {
   width: 100%;
 }
+
+/* Part 1 */
+
+.box--one {
+  width: 30%;
+}
+
+/* Part 2 */
+
+@media screen and (min-width: 599px) {
+  .box--two {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .box--two {
+    width: 400px;
+  }
+}
+
+/* Part 3 */
+
+@media screen and (orientation: landscape) {
+  .box--three {
+    border: 1px solid red;
+    transform: rotate(90deg);
+  }
+}
+
+/* Part 4 */
+
+@media screen and (prefers-color-scheme: dark) {
+  .box--four {
+    background-color: aqua;
+  }
+}
