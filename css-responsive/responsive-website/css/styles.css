@@ -256,6 +256,7 @@ width, etc. */
   .card-section {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .card-section > * {
