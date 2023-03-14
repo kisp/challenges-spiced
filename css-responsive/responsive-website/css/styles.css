@@ -263,3 +263,18 @@ width, etc. */
     width: 45%;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .card-section > :first-child {
+    width: 100%;
+    height: 45vh;
+  }
+
+  .card-section > :nth-child(2) {
+    align-self: flex-start;
+  }
+
+  .card-section > :last-child {
+    margin: 0 auto;
+  }
+}
