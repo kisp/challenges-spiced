@@ -27,6 +27,9 @@ body {
   max-width: 50rem;
 
   /* Add styles to the container */
+  display: grid;
+  grid-template: auto / repeat(3, 1fr);
+  gap: 2rem;
 }
 
 .cards__option {
