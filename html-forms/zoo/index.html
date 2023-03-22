@@ -21,20 +21,46 @@
           <legend>Enter your information</legend>
 
           <!-- Email: label & input -->
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
 
           <!-- Date: label & input -->
+          <label for="date">Date</label>
+          <input type="date" name="date" id="date" />
 
           <fieldset class="radio-options">
             <legend>Which one of these animals would you like to visit?</legend>
 
             <!-- Radio Buttons: labels & inputs -->
+            <label for="lion">Lion</label>
+            <input type="radio" name="animal" id="lion" />
+
+            <label for="tiger">Tiger</label>
+            <input type="radio" name="animal" id="tiger" />
+
+            <label for="snake">Snake</label>
+            <input type="radio" name="animal" id="snake" />
           </fieldset>
 
           <!-- Textarea: label & input -->
+          <label for="comments">Comments</label>
+          <textarea
+            name="comments"
+            id="comments"
+            cols="30"
+            rows="10"
+          ></textarea>
 
           <!-- Two Checkboxes: labels & inputs -->
+          <label for="consent">Consent for data processing</label>
+          <input type="checkbox" name="consent" id="consent" />
+
+          <label for="newsletter">Newsletter</label>
+          <input type="checkbox" name="newsletter" id="newsletter" />
 
           <!-- Two Buttons: reset & submit -->
+          <button type="reset">Reset</button>
+          <button type="submit">Submit</button>
         </fieldset>
       </form>
     </section>
