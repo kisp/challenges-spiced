@@ -16,3 +16,53 @@ For further information check MDN:
 - about CSS declarations with "style": https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
 
 */
+
+const box = document.querySelector('[data-js="box"]');
+
+const color = document.querySelector('[data-js="input-color"]');
+
+const radius = document.querySelector('[data-js="input-radius"]');
+
+const rotation = document.querySelector('[data-js="input-rotation"]');
+
+const size = document.querySelector('[data-js="input-size"]');
+
+color.addEventListener("input", () => {
+  box.style.background = `hsl(${color.value}, 70%, 60%)`;
+});
+
+radius.addEventListener("input", () => {
+  box.style.borderRadius = `${radius.value}px`;
+});
+
+const rotateAndScaleTransform = () => {
+  return `scale(${size.value}) rotate(${rotation.value}deg)`;
+};
+
+rotation.addEventListener("input", () => {
+  box.style.transform = rotateAndScaleTransform();
+});
+
+size.addEventListener("input", () => {
+  box.style.transform = rotateAndScaleTransform();
+});
+
+let animationId;
+
+const increaseRotation = () => {
+  const deg = parseInt(rotation.value);
+  let newDeg = deg + 1;
+  newDeg = newDeg % 180;
+  rotation.value = newDeg;
+  box.style.transform = rotateAndScaleTransform();
+  animationId = window.requestAnimationFrame(increaseRotation);
+};
+
+box.addEventListener("click", () => {
+  if (animationId) {
+    window.cancelAnimationFrame(animationId);
+    animationId = null;
+    return;
+  }
+  animationId = window.requestAnimationFrame(increaseRotation);
+});
