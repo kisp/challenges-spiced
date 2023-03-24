@@ -37,6 +37,7 @@ body {
   border-radius: 6px;
   box-shadow: 0 0 1rem rgba(133, 133, 133, 0.3);
   animation: slideIn 500ms forwards;
+  transition: opacity 300ms;
 }
 
 @keyframes slideIn {
