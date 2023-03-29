@@ -4,6 +4,7 @@ In this challenge, you will encounter the following tasks:
 
 - passing multiple callback functions to a higher order function
 
+
 ## Tasks
 
 1.  Write a function with the "function" keyword named "showWelcomeMessage".
