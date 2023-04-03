@@ -1,7 +1,7 @@
 import { Card } from "../components/Card/Card.js";
 import { renderElement } from "./utils.js";
 
-console.clear();
+// console.clear();
 
 const EXAMPLE_DATA = {
   name: "Luke Skywalker",
@@ -34,13 +34,20 @@ const EXAMPLE_DATA = {
 };
 
 // Create dom element for a card and append it to the root
-const firstCard = Card(EXAMPLE_DATA);
-renderElement(firstCard);
+// const firstCard = Card(EXAMPLE_DATA);
+// renderElement(firstCard);
 
-fetchDataAndRender();
+fetchDataAndRender().then(() => {
+  console.log("rendering is done!");
+});
 
 // --v-- your code below this line --v--
 
-function fetchDataAndRender() {
-  fetch(); // ?
+async function fetchDataAndRender() {
+  console.log("beginning fetch...");
+  const response = await fetch("https://swapi.dev/api/people");
+  const json = await response.json();
+  json.results.forEach((data) => {
+    renderElement(Card(data));
+  });
 }
