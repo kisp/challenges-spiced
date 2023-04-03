@@ -1,3 +1,3 @@
 import "./game.js";
 
-console.clear();
+// console.clear();
