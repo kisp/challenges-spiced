@@ -1,4 +1,4 @@
-console.clear();
+// console.clear();
 
 // EXERCISE 1
 // Use array destructuring to extract the variables "name", "price", and "quantity".
