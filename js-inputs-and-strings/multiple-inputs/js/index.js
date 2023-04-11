@@ -14,3 +14,27 @@ Implement the following functionality:
 const firstInput = document.querySelector("[data-js=first-input]");
 const secondInput = document.querySelector("[data-js=second-input]");
 const button = document.querySelector("[data-js=button]");
+
+const remainingActions = [
+  () => {
+    secondInput.value = firstInput.value;
+  },
+  () => {
+    secondInput.value = firstInput.value.toUpperCase();
+  },
+  () => {
+    const tmp = secondInput.value;
+    secondInput.value = firstInput.value;
+    firstInput.value = tmp;
+  },
+  () => {
+    alert(
+      "We are done! :) Nothing more to do... You can reload the page to restart."
+    );
+  },
+];
+
+button.addEventListener("click", () => {
+  const nextAction = remainingActions.shift();
+  nextAction();
+});
