@@ -22,4 +22,5 @@ p {
   width: 200px;
   height: 200px;
   background: hsl(0, 70%, 60%);
+  cursor: pointer;
 }
