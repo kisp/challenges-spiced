@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
+import { HelloWorld } from "./HelloWorld";
 
 export default function App() {
-  return <h1>Hello World!</h1>;
+  return <HelloWorld />;
 }
