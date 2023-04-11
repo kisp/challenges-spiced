@@ -6,6 +6,7 @@ In this challenge, you will encounter the following tasks:
 
 ## Tasks
 
+
 You should write a callback function in two different ways.
 In both cases your callback function should accept two parameters: "userName" and "userRole".
 The following message should be logged to the console:
