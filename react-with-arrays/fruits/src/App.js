@@ -9,7 +9,7 @@ export default function App() {
     },
     {
       id: 1338,
-      name: "🍏 Appel",
+      name: "🍏 Apple",
       color: "green",
     },
     {
