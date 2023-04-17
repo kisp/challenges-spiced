@@ -4,24 +4,22 @@ import "./Form.css";
 export default function Form({ onAddTag }) {
   const [tagInput, setTagInput] = useState("");
   const [formState, setFormState] = useState("valid");
-  const [invalidTag, setInvalidTag] = useState("");
 
   function handleTagChange(e) {
     setTagInput(e.target.value);
+    setFormState("valid");
   }
 
-  function handleInvalid(tag) {
+  function handleInvalid() {
     setFormState("invalid");
-    setInvalidTag(tag);
   }
 
   function handleValid() {
     setFormState("valid");
-    setInvalidTag("");
   }
 
   function isInvalid() {
-    return formState === "invalid" && invalidTag === tagInput;
+    return formState === "invalid";
   }
 
   function handleSubmit(event) {
@@ -38,7 +36,7 @@ export default function Form({ onAddTag }) {
       setTagInput("");
       event.target.elements.tag.focus();
     } else {
-      handleInvalid(tagInput);
+      handleInvalid();
     }
   }
 
