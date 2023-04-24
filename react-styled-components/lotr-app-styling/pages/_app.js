@@ -1,10 +1,16 @@
 import { GlobalStyle } from "../styles";
 
+import { Lora } from "next/font/google";
+
+const font = Lora({ subsets: ["latin"] });
+
 export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <div className={`myclass ${font.className}`}>
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }
