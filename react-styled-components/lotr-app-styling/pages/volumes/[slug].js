@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { volumes } from "../../lib/data";
 
+import Headline from "../../components/Headline";
+
 export default function VolumeDetail() {
   const router = useRouter();
   const { slug } = router.query;
@@ -22,7 +24,7 @@ export default function VolumeDetail() {
   return (
     <>
       <Link href="/volumes">← All Volumes</Link>
-      <h1>{title}</h1>
+      <Headline as="h1">{title}</Headline>
       <p>{description}</p>
       <ul>
         {books.map(({ ordinal, title }) => (
