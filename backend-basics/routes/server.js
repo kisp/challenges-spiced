@@ -5,7 +5,7 @@ export const server = createServer((req, res) => {
     if (req.url === "/api/fish/1") {
       res.end("Shrimp");
     } else {
-      res.end("Shrimp");
+      res.end("Anemonefish");
     }
   } catch (error) {
     res.statusCode = 500;

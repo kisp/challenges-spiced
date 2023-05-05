@@ -18,7 +18,7 @@ test("The server responds to /api/fish/1 with Shrimp", async () => {
   expect(response?.statusCode).toBe(200);
 });
 
-test.skip("The server responds to /api/fish/2 with Anemonefish", async () => {
+test("The server responds to /api/fish/2 with Anemonefish", async () => {
   const response = await getUrl("/api/fish/2");
   expect(response?.text).toBe("Anemonefish");
   expect(response?.statusCode).toBe(200);
