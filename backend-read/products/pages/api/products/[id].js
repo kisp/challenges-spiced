@@ -7,7 +7,7 @@ export default async function handler(request, response) {
   const conn = await dbConnect();
 
   // const product = await Product.findOne({ _id: id });
-  const product = await Product.findById(id);
+  const product = await Product.findById(id).populate("reviews");
 
   if (!product) {
     return response.status(404).json({ status: "Not Found" });
