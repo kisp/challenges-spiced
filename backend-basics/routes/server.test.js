@@ -8,7 +8,7 @@ test("A server instance is exported", () => {
   expect(server).toHaveProperty("listen");
 });
 
-test.skip("The server responds to /api/fish/1 with Shrimp", async () => {
+test("The server responds to /api/fish/1 with Shrimp", async () => {
   const response = server && (await request(server).get("/api/fish/1"));
   expect(response?.text).toBe("Shrimp");
   expect(response?.statusCode).toBe(200);

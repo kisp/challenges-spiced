@@ -1,3 +1,5 @@
 import { createServer } from "node:http";
 
-export const server = { listen: 123 };
+export const server = createServer((req, res) => {
+  res.end("Shrimp");
+});
