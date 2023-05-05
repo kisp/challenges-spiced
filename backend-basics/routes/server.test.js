@@ -30,7 +30,7 @@ test("The server responds to /api/fish/3 with Not found", async () => {
   expect(response?.statusCode).toBe(404);
 });
 
-test.skip("The server responds to all other routes with Not found", async () => {
+test("The server responds to all other routes with Not found", async () => {
   const response = await getUrl("/api/elephant");
   expect(response?.text).toBe("Not found");
   expect(response?.statusCode).toBe(404);
