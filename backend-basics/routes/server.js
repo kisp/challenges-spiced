@@ -1,3 +1,3 @@
 import { createServer } from "node:http";
 
-// export const server = …
+export const server = { listen: 123 };
