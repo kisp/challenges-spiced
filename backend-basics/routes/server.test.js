@@ -24,7 +24,7 @@ test("The server responds to /api/fish/2 with Anemonefish", async () => {
   expect(response?.statusCode).toBe(200);
 });
 
-test.skip("The server responds to /api/fish/3 with Not found", async () => {
+test("The server responds to /api/fish/3 with Not found", async () => {
   const response = await getUrl("/api/fish/3");
   expect(response?.text).toBe("Not found");
   expect(response?.statusCode).toBe(404);
