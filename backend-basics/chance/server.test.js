@@ -7,7 +7,7 @@ test("A server instance is exported", () => {
   expect(server).toHaveProperty("listen");
 });
 
-test.skip("The server responds with `Hello, my name is ${name} and I am ${age} years old. I am a ${profession}.`", async () => {
+test("The server responds with `Hello, my name is ${name} and I am ${age} years old. I am a ${profession}.`", async () => {
   const response = server && (await request(server).get("/"));
   expect(response?.text).toMatch(
     /^Hello, my name is (.*) and I am ([0-9]*) years old\. I am a (.*)\.$/
