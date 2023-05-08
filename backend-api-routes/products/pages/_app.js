@@ -1,10 +1,15 @@
 import GlobalStyle from "../styles";
+import { SWRConfig } from "swr";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <SWRConfig
+        value={{ fetcher: (url) => fetch(url).then((res) => res.json()) }}
+      >
+        <Component {...pageProps} />
+      </SWRConfig>
     </>
   );
 }
