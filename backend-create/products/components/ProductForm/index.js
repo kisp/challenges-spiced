@@ -1,12 +1,23 @@
 import { StyledForm, StyledHeading, StyledLabel } from "./ProductForm.styled";
 import { StyledButton } from "../Button/Button.styled";
 
-export default function ProductForm() {
+export default function ProductForm({ onAfterSubmit }) {
   async function handleSubmit(event) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
     const productData = Object.fromEntries(formData);
+    const response = await fetch("/api/products", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(productData),
+    });
+    if (response.ok) {
+      console.log("response is ok");
+      onAfterSubmit();
+    }
   }
 
   return (

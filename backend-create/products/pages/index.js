@@ -8,6 +8,10 @@ const Heading = styled.h1`
 `;
 
 export default function HomePage() {
+  function handleAfterSubmit() {
+    console.log("handleAfterSubmit");
+  }
+
   return (
     <>
       <Heading>
@@ -16,7 +20,7 @@ export default function HomePage() {
         </span>
         Fish Shop
       </Heading>
-      <ProductForm />
+      <ProductForm onAfterSubmit={handleAfterSubmit} />
       <hr />
       <ProductList />
     </>
